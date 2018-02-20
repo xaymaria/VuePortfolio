@@ -1,0 +1,236 @@
+h1 {
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 5px;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: calc(20px + 5px);
+}
+
+.fade-move {
+  transition: .3s transform .5s ease-in-out;
+}
+
+#projects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+#projects_links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 10000;
+}
+
+.projects_title {
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding-bottom: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  border-bottom: 1px solid #dddddd;
+}
+
+#projects span {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.tab-links {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 70%;
+  padding: 0;
+}
+
+.tab-links li {
+  list-style: none;
+}
+
+.tab-links a {
+  display: block;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: calc(100% - 30px);
+  padding: 15px 10px;
+  color: #222222;
+  border-bottom: 1px solid #dddddd;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.tab-links a:hover, li.active a, li.active a:hover {
+  padding: 15px;
+  width: calc(100% - 40px);
+  background: var(--color-orange);
+  color: #ffffff;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.tab-links span {
+    color: #ffffff;
+}
+
+#projects_panel {
+  position: absolute;
+  top: 20px;
+  left: 33%;
+  width: 66%;
+  height: calc(100% - 40px);
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.tab_hover {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+  -moz-box-shadow: inset 0 0 500px var(--color-orange);
+  -webkit-box-shadow: inset 0 0 500px var(--color-orange);
+  box-shadow: inset 0 0 500px var(--color-orange);
+  opacity: 1;
+  z-index: 100;
+}
+
+.tab_description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #000000;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0.07em 0 #000, 0 0.07em #000, -0.07em 0 #000, 0 -0.07em #000;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.tab {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: calc(25% - 13px);
+  border-right: 10px solid #ffffff;
+  overflow: hidden;
+  background-size: cover;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  position: inherit !important;
+}
+
+.tab.active {
+  width: calc(50% - 15px);
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  position: inherit !important;
+}
+
+.tab.active .tab_hover {
+  position: absolute;
+  top: 25px;
+  margin-left: 25px;
+  width: calc(50% - 65px);
+  height: calc(100% - 50px);
+  border: 2px solid var(--color-orange);
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity .5s .51s, 0s border .5s;
+}
+
+/* .tab.active .tab_hover::after,
+.tab.active .tab_hover::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+}
+
+.tab.active .tab_hover::before {
+  border-top:  2px solid #f7c282;
+  border-right:  2px solid #f7c282;
+  transition:
+      width 0.5s ease-out,
+      height 0.5s ease-out 0.25s;
+}
+
+.tab.active .tab_hover::after {
+  border-bottom: 2px solid #f7c282;
+  border-left: 2px solid #f7c282;
+  transition:
+      border-color 0s 0.5s ease-out 0.5s,
+      width 0.5s 0.5s ease-out,
+      height 0.5s 0.75s ease-out;
+} */
+
+.tab.active .tab_description {
+  opacity: 1;
+  transition: opacity .5s .51s ease-in-out;
+}
+
+.tab h1 {
+  display: inline-block;
+  margin-left: -19vh;
+  margin-top: 60vh;
+  width: 50vh;
+  height: 5vh;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  opacity: 1;
+  color: #222222;
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.tab.active h1 {
+  display: none;
+}
+
+.hidden {
+  display: none;
+  transition: opacity 1s;
+}
